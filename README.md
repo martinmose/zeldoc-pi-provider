@@ -47,7 +47,8 @@ seconds after startup). To make ZDev the default, add to `~/.pi/agent/settings.j
 
 Thinking levels are wired up per model: ZDev exposes `high` and `max`, ZDev 2
 exposes `low`, `high`, and `max`, and models served through the Zeldoc.ai router
-get the effort levels published on [models.dev](https://models.dev).
+(GPT, Gemini, ...) get the effort levels published on
+[models.dev](https://models.dev).
 
 ## Limit which models are shown
 
@@ -57,7 +58,7 @@ in `~/.pi/agent/settings.json`:
 
 ```json
 {
-  "zeldoc.models": ["zdev"]
+  "zeldoc.models": ["zdev", "gpt-5"]
 }
 ```
 
