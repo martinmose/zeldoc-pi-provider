@@ -1,0 +1,56 @@
+{
+  "name": "pi-zeldoc-provider",
+  "version": "0.1.0",
+  "description": "Zeldoc.ai model provider extension for the Pi coding agent",
+  "type": "module",
+  "license": "MIT",
+  "author": "Martin Mose Facondini",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/martinmose/pi-zeldoc-provider.git"
+  },
+  "homepage": "https://github.com/martinmose/pi-zeldoc-provider#readme",
+  "bugs": {
+    "url": "https://github.com/martinmose/pi-zeldoc-provider/issues"
+  },
+  "keywords": [
+    "pi",
+    "pi-package",
+    "pi-extension",
+    "zeldoc",
+    "zdev",
+    "llm",
+    "provider"
+  ],
+  "pi": {
+    "extensions": [
+      "./extensions/zeldoc.ts"
+    ]
+  },
+  "files": [
+    "extensions",
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "check": "tsc --noEmit",
+    "format": "biome check .",
+    "format:fix": "biome check --write ."
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-ai": "*",
+    "@earendil-works/pi-coding-agent": "*"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.4.10",
+    "@earendil-works/pi-ai": "0.85.0",
+    "@earendil-works/pi-coding-agent": "0.85.0",
+    "@types/node": "^22.0.0",
+    "typescript": "^5.9.0"
+  },
+  "packageManager": "pnpm@10.33.0"
+}
