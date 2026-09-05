@@ -31,7 +31,7 @@ const MODELS_DEV_URL = "https://models.dev/catalog.json";
 
 /** Local cache path for the models.dev catalog. */
 const CACHE_DIR = join(homedir(), ".pi", "agent", "cache");
-const CACHE_FILE = join(CACHE_DIR, "pi-zeldoc-provider-models-dev.json");
+const CACHE_FILE = join(CACHE_DIR, "zeldoc-pi-provider-models-dev.json");
 
 /** Cache TTL: 7 days in milliseconds. */
 const CACHE_TTL_MS = 7 * 24 * 60 * 60 * 1000;

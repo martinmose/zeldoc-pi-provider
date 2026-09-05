@@ -1,4 +1,4 @@
-# pi-zeldoc-provider
+# zeldoc-pi-provider
 
 [Zeldoc.ai](https://zeldoc.ai) model provider for the
 [Pi coding agent](https://github.com/badlogic/pi-mono/tree/main/packages/coding-agent).
@@ -9,13 +9,13 @@ API key can use, so you can pick ZDev or any router model from `/model`.
 ## Install
 
 ```bash
-pi install npm:pi-zeldoc-provider
+pi install npm:zeldoc-pi-provider
 ```
 
 Or straight from GitHub:
 
 ```bash
-pi install https://github.com/martinmose/pi-zeldoc-provider
+pi install https://github.com/martinmose/zeldoc-pi-provider
 ```
 
 ## Authenticate
@@ -76,7 +76,7 @@ keeps every ZDev model. Pi's own
   from models.dev (cached for 7 days under `~/.pi/agent/cache/`), and persists
   the catalog in Pi's models store. Later sessions load from the store and
   re-fetch at most once an hour, or immediately with `pi update --models`.
-- Set `PI_ZELDOC_PROVIDER_DEBUG=1` to trace refreshes on stderr.
+- Set `ZELDOC_PI_PROVIDER_DEBUG=1` to trace refreshes on stderr.
 
 ## Development
 

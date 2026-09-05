@@ -1,5 +1,5 @@
 {
-  "name": "pi-zeldoc-provider",
+  "name": "zeldoc-pi-provider",
   "version": "0.1.0",
   "description": "Zeldoc.ai model provider extension for the Pi coding agent",
   "type": "module",
@@ -7,11 +7,11 @@
   "author": "Martin Mose Facondini",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/martinmose/pi-zeldoc-provider.git"
+    "url": "git+https://github.com/martinmose/zeldoc-pi-provider.git"
   },
-  "homepage": "https://github.com/martinmose/pi-zeldoc-provider#readme",
+  "homepage": "https://github.com/martinmose/zeldoc-pi-provider#readme",
   "bugs": {
-    "url": "https://github.com/martinmose/pi-zeldoc-provider/issues"
+    "url": "https://github.com/martinmose/zeldoc-pi-provider/issues"
   },
   "keywords": [
     "pi",

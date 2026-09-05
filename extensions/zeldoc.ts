@@ -40,11 +40,11 @@ const API: Api = "openai-completions";
 const CATALOG_TTL_MS = 60 * 60 * 1000;
 
 /** Set this env var to any value to trace refreshes on stderr. */
-const DEBUG_ENV = "PI_ZELDOC_PROVIDER_DEBUG";
+const DEBUG_ENV = "ZELDOC_PI_PROVIDER_DEBUG";
 
 function debug(message: string): void {
   if (process.env[DEBUG_ENV]) {
-    process.stderr.write(`[pi-zeldoc-provider] ${message}\n`);
+    process.stderr.write(`[zeldoc-pi-provider] ${message}\n`);
   }
 }
 
