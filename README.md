@@ -46,8 +46,8 @@ seconds after startup). To make ZDev the default, add to `~/.pi/agent/settings.j
 ```
 
 Thinking levels are wired up per model: ZDev exposes `high` and `max`, ZDev 2
-exposes `low`, `high`, and `max`, and router models (GPT, Gemini, GLM, ...) get
-the effort levels published on [models.dev](https://models.dev).
+exposes `low`, `high`, and `max`, and models served through the Zeldoc.ai router
+get the effort levels published on [models.dev](https://models.dev).
 
 ## Limit which models are shown
 
@@ -57,11 +57,12 @@ in `~/.pi/agent/settings.json`:
 
 ```json
 {
-  "zeldoc.models": ["zdev", "glm", "gpt-5"]
+  "zeldoc.models": ["zdev"]
 }
 ```
 
-Only model ids containing one of the substrings are registered. Pi's own
+Only model ids containing one of the substrings are registered, so `"zdev"`
+keeps every ZDev model. Pi's own
 `enabledModels` setting still applies on top for Ctrl+P cycling.
 
 ## How it works

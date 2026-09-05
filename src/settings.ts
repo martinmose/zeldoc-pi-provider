@@ -5,7 +5,7 @@
  * Pi's own keys in `~/.pi/agent/settings.json`:
  *
  * ```json
- * { "zeldoc.models": ["zdev", "glm"] }
+ * { "zeldoc.models": ["zdev"] }
  * ```
  */
 
