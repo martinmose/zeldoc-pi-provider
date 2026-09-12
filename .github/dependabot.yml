@@ -1,0 +1,20 @@
+---
+# Keeps the `uses:` pins in .github/workflows current. Grouped so a week's
+# action bumps arrive as one pull request rather than one per action.
+#
+# This does not cover the tool versions pinned as env vars in the workflows
+# themselves (TRIVY_VERSION, GITLEAKS_VERSION, KUBECONFORM_VERSION,
+# OPENTOFU_VERSION, TFLINT_VERSION). Dependabot has no ecosystem for those;
+# they stay a manual sweep.
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+    open-pull-requests-limit: 5
+    groups:
+      github-actions:
+        patterns:
+          - "*"
