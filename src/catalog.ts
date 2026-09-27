@@ -163,7 +163,7 @@ const ZELDOC_NATIVE_OVERRIDES: Record<string, NativeOverride> = {
     thinkingLevelMap: {
       off: null,
       minimal: null,
-      low: null,
+      low: "low",
       medium: null,
       high: "high",
       xhigh: null,

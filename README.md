@@ -45,8 +45,8 @@ seconds after startup). To make ZDev the default, add to `~/.pi/agent/settings.j
 }
 ```
 
-Thinking levels are wired up per model: ZDev exposes `high` and `max`, ZDev 2
-exposes `low`, `high`, and `max`, and models served through the Zeldoc.ai router
+Thinking levels are wired up per model: ZDev and ZDev 2 expose `low`, `high`, and
+`max`, and models served through the Zeldoc.ai router
 (GPT, Gemini, ...) get the effort levels published on
 [models.dev](https://models.dev).
 
