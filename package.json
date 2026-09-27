@@ -1,6 +1,6 @@
 {
   "name": "zeldoc-pi-provider",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Zeldoc.ai model provider extension for the Pi coding agent",
   "type": "module",
   "license": "MIT",
