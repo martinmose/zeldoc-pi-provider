@@ -50,7 +50,7 @@
     "@earendil-works/pi-ai": "0.85.0",
     "@earendil-works/pi-coding-agent": "0.85.0",
     "@types/node": "^22.0.0",
-    "typescript": "^5.9.0"
+    "typescript": "^7.0.0"
   },
   "packageManager": "pnpm@10.33.0"
 }
