@@ -13,11 +13,12 @@ jobs:
     steps:
       - uses: actions/checkout@v7
 
+      # Installs the pnpm release package.json's packageManager names.
       - uses: pnpm/action-setup@v6
 
       - uses: actions/setup-node@v7
         with:
-          node-version: 22
+          node-version: 24
           cache: pnpm
           registry-url: https://registry.npmjs.org
 

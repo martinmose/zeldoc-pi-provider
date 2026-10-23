@@ -10,7 +10,12 @@
  * inside Pi, pick **Zeldoc.ai**, and paste the key.
  */
 
-import type { Api, Model, RefreshModelsContext } from "@earendil-works/pi-ai";
+import type {
+  AnyModel,
+  Api,
+  Model,
+  RefreshModelsContext,
+} from "@earendil-works/pi-ai";
 import type {
   ExtensionAPI,
   ProviderModelConfig,
@@ -59,6 +64,17 @@ function toStoredModel(model: ZeldocModel): StoredModel {
     provider: PROVIDER_ID,
     baseUrl: ZELDOC_BASE_URL,
   };
+}
+
+/**
+ * True for chat models. Since pi 0.99 the models store also holds image and
+ * classifier models, and a chat model may omit `type`. This provider only
+ * persists chat models, so anything else in its snapshot is skipped. Same
+ * rule as pi-ai's `isModelType(model, "chat")`, kept local so the extension
+ * imports nothing from pi-ai at runtime and still loads in older Pi releases.
+ */
+function isChatModel(model: Readonly<AnyModel>): model is Readonly<Model<Api>> {
+  return (model.type ?? "chat") === "chat";
 }
 
 /** Convert a persisted model back into the `registerProvider` model shape. */
@@ -141,7 +157,7 @@ export default function (pi: ExtensionAPI): void {
     models: withSeeds([], allowlist),
 
     async refreshModels(context) {
-      const storedModels = context.stored?.models ?? [];
+      const storedModels = (context.stored?.models ?? []).filter(isChatModel);
       const keptIds = new Set(
         filterModelIds(
           storedModels.map((m) => m.id),
