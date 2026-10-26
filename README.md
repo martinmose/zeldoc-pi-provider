@@ -15,7 +15,7 @@ pi install npm:zeldoc-pi-provider
 Or straight from GitHub:
 
 ```bash
-pi install https://github.com/martinmose/zeldoc-pi-provider
+pi install https://github.com/zeldoc/zeldoc-pi-provider
 ```
 
 ## Authenticate
