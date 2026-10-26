@@ -7,11 +7,11 @@
   "author": "Martin Mose Facondini",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/martinmose/zeldoc-pi-provider.git"
+    "url": "git+https://github.com/zeldoc/zeldoc-pi-provider.git"
   },
-  "homepage": "https://github.com/martinmose/zeldoc-pi-provider#readme",
+  "homepage": "https://github.com/zeldoc/zeldoc-pi-provider#readme",
   "bugs": {
-    "url": "https://github.com/martinmose/zeldoc-pi-provider/issues"
+    "url": "https://github.com/zeldoc/zeldoc-pi-provider/issues"
   },
   "keywords": [
     "pi",
