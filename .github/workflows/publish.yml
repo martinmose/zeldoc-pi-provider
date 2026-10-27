@@ -8,11 +8,13 @@ on:
 jobs:
   publish:
     runs-on: ubuntu-26.04
-    # NPM_TOKEN lives in the npm environment, which only v* tags can use, so a
-    # workflow on a branch cannot read it.
+    # Trusted publishing: npm accepts this workflow's OIDC token, from the npm
+    # environment, instead of a stored token. Only v* tags can use that
+    # environment, so a workflow on a branch cannot publish.
     environment: npm
     permissions:
       contents: read
+      id-token: write
     steps:
       - uses: actions/checkout@v7
 
@@ -34,5 +36,3 @@ jobs:
         run: pnpm format
 
       - run: npm publish
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
