@@ -1,1 +1,4 @@
+allowBuilds:
+  '@google/genai': false
+  protobufjs: false
 minimumReleaseAge: 0
